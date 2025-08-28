@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-2.jpg";
+import bookImg from "../assets/images/bg-cafe-2.jpg";
 import useSWR from "swr";
 import { Book } from "../lib/models";
 import Loading from "../components/loading";
@@ -54,7 +55,7 @@ export default function BooksPage() {
             {books?.map((book) => (
               <div className="border border-solid border-neutral-200" key={book.id}>
                 <img
-                  src="src/assets/images/books.png"
+                  src={bookImg}
                   alt={book.title}
                   className="w-full object-cover aspect-[3/4]"
                 />
