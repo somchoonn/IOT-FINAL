@@ -6,7 +6,6 @@ import { useState } from "react";
 import axios, { AxiosError } from "axios";
 import { notifications } from "@mantine/notifications";
 import { Book } from "../lib/models";
-import { DateTimePicker } from "@mantine/dates";
 
 export default function BookCreatePage() {
   const navigate = useNavigate();
@@ -33,15 +32,6 @@ export default function BookCreatePage() {
   const handleSubmit = async (values: typeof bookCreateForm.values) => {
     try {
       setIsProcessing(true);
-      const response = await axios.post<{
-        message: string;
-        book: Book;
-      }>(`/books`, values);
-      notifications.show({
-        title: "เพิ่มข้อมูลหนังสือสำเร็จ",
-        message: "ข้อมูลหนังสือได้รับการเพิ่มเรียบร้อยแล้ว",
-        color: "teal",
-      });
       // navigate(`/books/${response.data.book.id}`);
       navigate(`/books`);
     } catch (error) {
