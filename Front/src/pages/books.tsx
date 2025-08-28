@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-2.jpg";
-import bookImg from "../assets/images/bg-cafe-2.jpg";
+import bookImg from "../assets/images/books.png";
 import useSWR from "swr";
 import { Book } from "../lib/models";
 import Loading from "../components/loading";
